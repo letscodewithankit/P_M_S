@@ -14,6 +14,7 @@
                  <table class="table table-striped">
                      <thead>
                      <tr>
+                         <th>ID</th>
                          <th>Type</th>
                          <th>Charge</th>
                          <th>Action</th>
@@ -22,6 +23,7 @@
                      <tbody>
                      @foreach($data as $data2)
                          <tr>
+                             <td>{{$data2->id}}</td>
                              <td>{{$data2->type}}</td>
                              <td><span>&#8377 </span>{{$data2->charges}}</td>
                              <td>

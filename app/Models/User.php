@@ -44,8 +44,8 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function get_vehicle_data()
+    public function get_parked_data()
     {
-        $this->hasMany(VehicleParkedController::class,'provider_id');
+       return $this->hasMany(Vehicle_ParkedModel::class,'operator_id');
     }
 }

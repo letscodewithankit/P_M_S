@@ -36,7 +36,8 @@ class AdminLoginController extends Controller
             'password'=>$request->password
         ]))
         {
-            return view('AdminView.AdminDashboard');
+
+            return redirect(route('admin_dashboard'));
         }
         else
         {

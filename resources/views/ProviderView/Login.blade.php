@@ -12,8 +12,7 @@
                         <div class="col-12">
                             <div class="text-center mb-5">
                                 <a href="#!">
-                                    <img src="./assets/img/bsb-logo.svg" alt="BootstrapBrain Logo" width="175" height="57">
-                                </a>
+                                    <img style="position: center" width="100px" src="{{url('assest/icon/parking.png')}}"/>                                </a>
                             </div>
                         </div>
                     </div>

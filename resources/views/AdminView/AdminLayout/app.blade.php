@@ -58,17 +58,21 @@
                 <!-- Collapsed content -->
                 <ul id="collapseExample1" class="collapse show list-group list-group-flush">
                     <li class="list-group-item py-1">
-                        <a href="{{route('admin_dashboard_provider')}}" class="text-reset" style="text-decoration: none">Provider</a>
+                        <a href="{{route('admin_dashboard')}}" class="text-reset" style="text-decoration: none">Home</a>
+                    </li>
+                    <li class="list-group-item py-1">
+                        <a href="{{route('admin_dashboard_provider')}}" class="text-reset" style="text-decoration: none">Operator</a>
                     </li>
                     <li class="list-group-item py-1">
                         <a style="text-decoration: none" href="{{route('admin_dashboard_vehicle')}}" class="text-reset">Vehicle</a>
                     </li>
                     <li class="list-group-item py-1">
-                        <a href="" class="text-reset">Report</a>
+                        <a style="text-decoration: none" href="{{route('provider_report')}}" class="text-reset">Report</a>
                     </li>
                     <li class="list-group-item py-1">
-                        <a href="" class="text-reset">Link</a>
+                        <a style="text-decoration: none" href="{{route('form')}}" class="text-reset">Form</a>
                     </li>
+
                 </ul>
                 <!-- Collapse 1 -->
 

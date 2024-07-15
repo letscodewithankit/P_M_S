@@ -26,6 +26,7 @@
                    <table class="table table-striped">
                        <thead>
                        <tr>
+                           <th>ID</th>
                            <th>Full Name</th>
                            <th>Email</th>
                            <th>Password</th>
@@ -35,6 +36,7 @@
                        <tbody>
                        @foreach($data as $data2)
                        <tr>
+                           <td>{{$data2->id}}</td>
                            <td>{{$data2->name}}</td>
                            <td>{{$data2->email}}</td>
                            <td>*******</td>

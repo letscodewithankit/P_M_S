@@ -11,10 +11,12 @@ use Illuminate\Support\Facades\Auth;
 class ProviderLoginController extends Controller
 {
 
+
     public function index()
     {
         return view('ProviderView.Login');
     }
+
     public function login(Request $request)
     {
         $request->validate([
@@ -27,8 +29,7 @@ class ProviderLoginController extends Controller
             'password'=>$request->password
         ]))
         {
-            $data=VehicleModel::all();
-            return view('ProviderView.Dashboard',compact('data'));
+           return redirect(route('provider_dashboard'));
         }
         else
         {

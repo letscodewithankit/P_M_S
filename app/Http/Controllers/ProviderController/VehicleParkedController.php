@@ -4,11 +4,17 @@ namespace App\Http\Controllers\ProviderController;
 
 use App\Http\Controllers\Controller;
 use App\Models\Vehicle_ParkedModel;
+use App\Models\VehicleModel;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
 class VehicleParkedController extends Controller
 {
+    public function index()
+    {
+        $data=VehicleModel::all();
+        return view('ProviderView.Dashboard',compact('data'));
+    }
     public function store(Request $request)
     {
       $request->validate([
@@ -21,8 +27,9 @@ class VehicleParkedController extends Controller
       $data->operator_id=$request->provider_id;
       $data->vehicle_id=$request->vehicle_id;
       $data->vehicle_number=$request->vehicle_number;
-      $data->date=Carbon::today();
-      $data->time=Carbon::now('Asia/Kolkata');
+        $dt = Carbon::now();
+      $data->date=$dt->toDateString();
+      $data->time=$dt->toTimeString();
       $data->status=1;
       $data->save();
 

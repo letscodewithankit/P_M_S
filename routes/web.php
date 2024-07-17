@@ -22,6 +22,7 @@ Route::post('/login_provider',[\App\Http\Controllers\ProviderController\Provider
 
 //admin
 Route::get('/admin/login',[\App\Http\Controllers\AdminController\AdminLoginController::class,'index']);
+Route::post('/admin/login/check',[\App\Http\Controllers\AdminController\AdminLoginController::class,'login'])->name('admin_login');
 
 
 Route::group(['middleware'=>'user'],function (){
@@ -33,11 +34,11 @@ Route::group(['middleware'=>'user'],function (){
 
 });
 
+
 Route::group(['middleware'=>'admin'],function(){
-    Route::get('/admin/dashboard',[\App\Http\Controllers\AdminController\AdminDashboard::class,'index'])->name('admin_dashboard');
-    Route::post('/admin/login/check',[\App\Http\Controllers\AdminController\AdminLoginController::class,'login'])->name('admin_login');
     Route::get('/admin/logout',[\App\Http\Controllers\AdminController\AdminLoginController::class,'logout'])->name('admin_logout');
 
+    Route::get('/admin/dashboard',[\App\Http\Controllers\AdminController\AdminDashboard::class,'index'])->name('admin_dashboard');
 
     Route::post('/admin/dashboard/s_data',[\App\Http\Controllers\AdminController\AdminDashboard::class,'search_wise_data']);
 
